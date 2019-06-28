@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head th:fragment="head" th:remove="tag">
+	<meta charset="utf-8">
+	<title th:text="${title}"></title>
+	<link rel="stylesheet" th:href="@{/admin/css/bootstrap.min.css}" />
+	<link rel="stylesheet" th:href="@{/admin/font-awesome/css/font-awesome.min.css}" />
+	<link rel="stylesheet" th:href="@{/admin/css/nprogress.css}" />
+	<link rel="stylesheet" th:href="@{/admin/css/green.css}" />
+	<link rel="stylesheet" th:href="@{/admin/css/custom.min.css}" />
+</head>
+<body class="nav-md">
+	<div class="container body">
+		<div class="main_container">
+			<!-- sidebar menu -->
+			<div th:fragment="menu" class="col-md-3 left_col">
+				<div th:replace="views/admin/layout/menu"></div>
+			</div>
+			<!-- /sidebar menu -->
+			
+			<!-- top navigation -->
+			<div th:fragment="header" class="top_nav">
+				<div th:replace="views/admin/layout/header"></div>
+			</div>
+			<!-- /top navigation -->
+			
+			<!-- page content -->
+			<div class="right_col" role="main">
+				
+			</div>
+			<!-- /page content -->
+			
+			<!-- footer content -->
+			<footer th:fragment="footer" th:remove="tag">
+				<div class="pull-right">
+					Evaluación 360° - Desarrollado por 
+					<a href="https://twitter.com/fbarrientose">Fredy Barrientos</a>
+				</div>
+				<div class="clearfix"></div>
+				<script th:src="@{/admin/js/jquery.min.js}"></script>
+				<script th:src="@{/admin/js/bootstrap.min.js}"></script>
+				<script th:src="@{/admin/js/fastclick.js}"></script>
+				<script th:src="@{/admin/js/nprogress.js}"></script>
+				<script th:src="@{/admin/js/custom.min.js}"></script>
+			</footer>
+			<!-- /footer content -->
+		</div>
+	</div>
+</body>
+</html>
